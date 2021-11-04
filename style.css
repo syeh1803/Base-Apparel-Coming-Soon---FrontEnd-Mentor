@@ -1,0 +1,340 @@
+/* reset css */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Additions Below */
+:root,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* style starts here */
+body {
+  background: linear-gradient(to right, #ffffff, #fff5f5);
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  position: absolute;
+  top: 0;
+}
+
+header img {
+  padding: 3rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  max-width: 144em;
+  flex-direction: column-reverse;
+  height: auto;
+  margin-top: 10rem;
+}
+
+.wrapper-right {
+  background-image: url(./images/hero-mobile.jpg);
+  width: 100%;
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper-left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2.6rem;
+  margin-top: 3.2rem;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  color: hsl(0, 6%, 24%);
+}
+
+.content h1.first-row {
+  font-weight: 200;
+  color: hsl(0, 36%, 70%);
+}
+
+.content p {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+  margin: 1.3rem 0 3.5rem 0;
+  line-height: 1.3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+form input {
+  padding: 1.4rem 12.5rem 1.4rem 1.8rem;
+  border-radius: 2.2rem;
+  border: 1px solid hsl(0, 36%, 70%);
+  position: relative;
+}
+
+form input:focus {
+  outline: none;
+  position: relative;
+}
+
+input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+form.error input {
+  outline: 1px solid hsl(0, 93%, 68%);
+}
+
+form img.error-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 68%;
+  top: 25%;
+  display: none;
+}
+
+form.error img.error-icon {
+    display: block;
+}
+
+form small {
+  position: absolute;
+  top: 120%;
+  left: 8%;
+  color: hsl(0, 93%, 68%);
+  opacity: 0.6;
+}
+
+form button {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(to right, #f8bfbf, #ee8c8c);
+  padding: 1.25rem 3rem;
+  border-radius: 2.4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+form button img {
+  transform: translate(-0.1rem, 0.1rem);
+  display: inline-block;
+  width: 1.1rem;
+  height: 2rem;
+}
+
+/* media query */
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  header {
+    left: 9.5%;
+    top: 4%;
+  }
+
+  .container {
+    flex-direction: row;
+    margin: unset;
+  }
+
+  .content {
+    text-align: left;
+    padding: 17.5rem 14rem;
+  }
+
+  .content h1 {
+    font-size: 6rem;
+  }
+
+  .content p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin: 3rem 0;
+  }
+
+  form input {
+    padding: 2rem 0 2rem 3rem;
+    border-radius: 4rem;
+  }
+
+  form button {
+    padding: 3rem 4.5rem;
+    border-radius: 3rem;
+    bottom: 10%;
+  }
+
+  form button:hover {
+    background: hsl(0, 75%, 91%);
+    box-shadow: 0px 18px 20px -5px rgba(232, 191, 192, 0.63);
+  }
+
+  form button img {
+    transform: translateY(-0.8rem);
+  }
+
+  form img.error-icon {
+    left: 73%;
+  }
+
+  .wrapper-right {
+    background-image: url(./images/hero-desktop.jpg);
+    width: 71%;
+    height: 100vh;
+  }
+}
